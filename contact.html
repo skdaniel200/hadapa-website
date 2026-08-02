@@ -115,7 +115,10 @@
       <!-- RIGHT: FORM -->
       <div class="form">
         <h3 style="margin-bottom:24px; font-size:1.3rem;">Request a Free Consultation</h3>
-        <form onsubmit="handleSubmit(event)">
+        <form id="contactForm" onsubmit="handleSubmit(event)">
+          <input type="hidden" name="_subject" value="New consultation request - Hadapa Services website" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form-row">
             <div class="form-group">
               <label for="firstName">First Name *</label>
@@ -174,8 +177,11 @@
             <textarea id="message" name="message" placeholder="Describe your current challenges, goals, or what you're looking to achieve..."></textarea>
           </div>
 
-          <button type="submit" class="btn btn--primary form-submit">Send My Request</button>
+          <button type="submit" class="btn btn--primary form-submit" id="submitBtn">Send My Request</button>
         </form>
+
+        <!-- ERROR STATE (hidden) -->
+        <div id="errorMsg" style="display:none; color:#b91c1c; margin-top:16px; font-size:.9rem;"></div>
 
         <!-- SUCCESS STATE (hidden) -->
         <div id="successMsg" style="display:none; text-align:center; padding: 40px 20px;">
@@ -259,11 +265,33 @@
 </footer>
 
 <script>
-function handleSubmit(e) {
+async function handleSubmit(e) {
   e.preventDefault();
-  document.querySelector('.form form').style.display = 'none';
-  document.querySelector('.form h3').style.display = 'none';
-  document.getElementById('successMsg').style.display = 'block';
+  const form = e.target;
+  const btn = document.getElementById('submitBtn');
+  const errorEl = document.getElementById('errorMsg');
+
+  errorEl.style.display = 'none';
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+
+  try {
+    const res = await fetch('https://formsubmit.co/ajax/contact@hadapaservices.com', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    if (!res.ok) throw new Error('Request failed');
+
+    form.style.display = 'none';
+    document.querySelector('.form h3').style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Send My Request';
+    errorEl.textContent = 'Something went wrong sending your request. Please email us directly at contact@hadapaservices.com.';
+    errorEl.style.display = 'block';
+  }
 }
 </script>
 <script src="script.js"></script>
