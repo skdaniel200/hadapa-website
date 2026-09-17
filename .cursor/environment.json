@@ -1,0 +1,10 @@
+{
+  "name": "Hadapa Services",
+  "install": "cd hadapa-react && npm ci",
+  "terminals": [
+    {
+      "name": "vite-dev",
+      "command": "cd hadapa-react && npm run dev -- --host 0.0.0.0"
+    }
+  ]
+}
