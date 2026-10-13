@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vendor Compliance Tracker - Hadapa Services</title>
+  <meta name="description" content="AI-powered vendor and subcontractor compliance tracking. Upload a Certificate of Insurance and see coverage status instantly - no manual review, no missed renewals." />
+  <link rel="stylesheet" href="style.css?v=5" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <meta property="og:title" content="Vendor Compliance Tracker - Hadapa Services" />
+  <meta property="og:description" content="AI-powered vendor and subcontractor compliance tracking. Upload a Certificate of Insurance and see coverage status instantly." />
+  <meta property="og:image" content="https://hadapaservices1-code.github.io/Hadapa/logo.png" />
+  <meta property="og:url" content="https://hadapaservices.com/vendor-compliance.html" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== NAVIGATION ===== -->
+<nav class="nav">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo"><img src="logo.png" alt="Hadapa Services" /></a>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="products.html" class="active">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="schedule.html" class="btn btn--primary nav__cta">Get a Free Compliance Audit</a>
+    <button class="nav__toggle" onclick="document.getElementById('navLinks').classList.toggle('open')" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<section class="page-hero">
+  <div class="container">
+    <span class="section-header__tag" style="background:rgba(255,255,255,.12);color:#b3dce6;">Vendor Compliance</span>
+    <h1 style="margin-top:16px;">Manual Certificate Tracking Is Over</h1>
+    <p>AI reads every Certificate of Insurance the moment it lands - coverage limits, endorsements, expiration dates - and tells you what's missing before a lapse becomes a liability.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:32px;">
+      <a href="schedule.html" class="btn btn--primary">Get a Free Compliance Audit</a>
+      <a href="#how-it-works" class="btn btn--outline">See How It Works</a>
+    </div>
+
+    <!-- Dashboard mockup -->
+    <div style="margin-top:56px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:28px;max-width:760px;margin-inline:auto;text-align:left;backdrop-filter:blur(6px);">
+      <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:16px;">
+        <div style="flex:1;min-width:140px;background:rgba(255,255,255,.08);border-radius:10px;padding:16px;">
+          <div style="font-size:.78rem;color:#b3dce6;margin-bottom:4px;">Compliant</div>
+          <div style="font-size:1.6rem;font-weight:800;color:#fff;">18</div>
+        </div>
+        <div style="flex:1;min-width:140px;background:rgba(255,255,255,.08);border-radius:10px;padding:16px;">
+          <div style="font-size:.78rem;color:#f3d9a4;margin-bottom:4px;">Expiring Soon</div>
+          <div style="font-size:1.6rem;font-weight:800;color:#fff;">3</div>
+        </div>
+        <div style="flex:1;min-width:140px;background:rgba(255,255,255,.08);border-radius:10px;padding:16px;">
+          <div style="font-size:.78rem;color:#f3a4a4;margin-bottom:4px;">Non-Compliant</div>
+          <div style="font-size:1.6rem;font-weight:800;color:#fff;">2</div>
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,.08);border-radius:10px;padding:14px 16px;font-size:.85rem;color:#dbeefc;">
+        Acme Roofing Co. &mdash; Waiver of Subrogation missing &mdash; flagged automatically, no one had to check
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats__grid">
+      <div class="stats__item" data-animate="fade" data-delay="1">
+        <strong>100%</strong>
+        <span>Documents Read by AI - Scans &amp; Photos Included</span>
+      </div>
+      <div class="stats__item" data-animate="fade" data-delay="2">
+        <strong>24/7</strong>
+        <span>Continuous Monitoring, Not Just at Upload</span>
+      </div>
+      <div class="stats__item" data-animate="fade" data-delay="3">
+        <strong>2</strong>
+        <span>Endorsement Checks Most Tools Skip</span>
+      </div>
+      <div class="stats__item" data-animate="fade" data-delay="4">
+        <strong>Minutes</strong>
+        <span>From Upload to Compliance Status</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHAT IT DOES ===== -->
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-header" data-animate>
+      <span class="section-header__tag">How it works</span>
+      <h2>Built to Catch What Manual Review Misses</h2>
+      <p>Coverage limits are only half the picture. A certificate can meet every dollar threshold and still leave you exposed if an endorsement is missing.</p>
+    </div>
+    <div class="cards cards--3">
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z"/></svg></div>
+        <h3>Vision-Based Extraction</h3>
+        <p>Upload a clean PDF or a photo of a certificate taken on a job site - Claude reads it directly, no clean text layer or OCR step required.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/></svg></div>
+        <h3>Deterministic Compliance Engine</h3>
+        <p>Every coverage limit and every endorsement checkbox - Additional Insured, Waiver of Subrogation - checked against your own requirements, not a hardcoded guess.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div>
+        <h3>Proactive Monitoring</h3>
+        <p>Runs on its own schedule in the background and flags an expiring or lapsed certificate before it becomes a liability - no one has to remember to check.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"/></svg></div>
+        <h3>Plain-English Rules</h3>
+        <p>Tell it what you want monitored in plain English. It asks a clarifying question instead of guessing when a request is ambiguous - then simulates the rule before it goes live.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09Z"/></svg></div>
+        <h3>No Guessing, Ever</h3>
+        <p>The AI only ever extracts and compiles. A deterministic engine makes every compliance decision and fires every notification - fully auditable, never a black box.</p>
+      </div>
+      <div class="card">
+        <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21"/></svg></div>
+        <h3>Built for GCs &amp; Property Managers</h3>
+        <p>Priced and packaged for the company with 15-50 active subcontractors - not an enterprise portfolio tool that leaves the mid-market behind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="section section--alt">
+  <div class="container">
+    <div class="cta-strip" data-animate>
+      <h2>See What's Expired Before Your Next Audit Does</h2>
+      <p>We'll run a free compliance audit on your current vendor file - no obligation, 24-hour turnaround.</p>
+      <a href="schedule.html" class="btn btn--primary">Get a Free Compliance Audit</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">HADAPA<span>.</span></div>
+        <p>AI consulting &amp; business strategy - co-creating solutions for a better tomorrow.</p>
+      </div>
+      <div class="footer__col">
+        <h4>Pillars</h4>
+        <ul>
+          <li><a href="services.html">Sales</a></li>
+          <li><a href="services.html">Service / Retail / Ecommerce</a></li>
+          <li><a href="services.html">Marketing</a></li>
+          <li><a href="services.html">Software Solutions</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="schedule.html">Get a Consultation</a></li>
+          <li><a href="mailto:contact@hadapaservices.com">contact@hadapaservices.com</a></li>
+          <li>Brentwood, CA</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2025 Hadapa Services LLC. All rights reserved.</span>
+      <span>AI Consulting &amp; Business Strategy</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
